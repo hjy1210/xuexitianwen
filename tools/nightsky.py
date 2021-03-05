@@ -16,7 +16,7 @@ def getPlanetTable(timestr, location):
     Vmag = [-3,-3,-2.48,-4.92,-2.94, -2.94, -0.55, 5.38, 7.67]
     size = [17,17,5,5,5,4,4,2,1]
     t = Time(timestr, scale='utc')
-    solar_system_ephemeris.set('de430.bsp')
+    solar_system_ephemeris.set('jpl')
     table = Table ()
     alts=[]
     azs=[]
