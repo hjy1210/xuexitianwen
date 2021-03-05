@@ -45,7 +45,7 @@ class MyFrame(wx.Frame):
         #self.Bind(wx.EVT_KEY_DOWN, self.on_key_press, self)
 
         self.cid = self.canvas.mpl_connect('pick_event', self.on_pick)
-        self.cidkey_press = self.canvas.mpl_connect('key_press_event', self.on_key_press)
+        self.cidkey_press = self.canvas.mpl_connect('key_release_event', self.on_key_press)
 
         self.canvasDraw(None)
 
@@ -250,17 +250,17 @@ class MyFrame(wx.Frame):
         self.starValue.SetLabel('天體：{}, az:{:.4f}, alt={:.4f}'.format(self.table[ind[index]]['name'],self.table[ind[index]]['az'],self.table[ind[index]]['alt']))
     def on_key_press(self, event):
         #print(event.key, event.xdata, event.ydata)
-        if event.key=="=":
+        if event.key=="ctrl+=":
             self.onSubFov(event)
-        if event.key=="-":
+        if event.key=="ctrl+-":
             self.onAddFov(event)
-        if event.key=="4":
+        if event.key=="ctrl+4":
             self.onSubAz(event)
-        if event.key=="6":
+        if event.key=="ctrl+6":
             self.onAddAz(event)
-        if event.key=="2":
+        if event.key=="ctrl+2":
             self.onSubAlt(event)
-        if event.key=="8":
+        if event.key=="ctrl+8":
             self.onAddAlt(event)
         
     def getAzTable(self, az):

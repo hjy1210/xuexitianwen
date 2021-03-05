@@ -8,7 +8,7 @@ import time
 
 def lonofobj(objname, t):
     # t = Time({'year':year, 'month': month, 'day': day, 'hour': hour, 'minute': minute, 'second': second})
-    with solar_system_ephemeris.set('de430.bsp'):
+    with solar_system_ephemeris.set('jpl'):
         obj = get_body(objname, t)
     obj_ecliptic = obj.transform_to(GeocentricTrueEcliptic(equinox=t))
     return obj_ecliptic.lon.value
