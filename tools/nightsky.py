@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 from astropy.coordinates import Angle, GeocentricTrueEcliptic, GCRS
-from astropy.coordinates import SkyCoord, EarthLocation, AltAz, solar_system_ephemeris, get_body, TETE
+from astropy.coordinates import SkyCoord, EarthLocation, AltAz, solar_system_ephemeris, get_body #, TETE
 from astropy.table import QTable, Table, Column, vstack
 from enum import Enum
 from matplotlib.font_manager import FontProperties

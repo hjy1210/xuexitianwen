@@ -17,3 +17,7 @@
 [WxHowtoBuildingForms](https://wiki.wxpython.org/WxHowtoBuildingForms)
 
 [Matplotlib gallery](https://matplotlib.org/stable/gallery/index.html) 裡面的 Embedding Matplotlib in graphical user interfaces 有 Matplotlib 與 wxPython 搭配的範例，例如[Embedding in wx #2](https://matplotlib.org/stable/gallery/user_interfaces/embedding_in_wx2_sgskip.html#sphx-glr-gallery-user-interfaces-embedding-in-wx2-sgskip-py)。
+
+## kuatee.py
+
+執行 `python kuatee.py` 可以觀看天空的星星。
